@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="852.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationController">
+   <children>
+      <TextField fx:id="firstName" layoutX="158.0" layoutY="62.0" />
+      <TextField fx:id="lastName" layoutX="158.0" layoutY="111.0" />
+      <TextField fx:id="ssn" alignment="CENTER" layoutX="158.0" layoutY="159.0" promptText="Only Digits" />
+      <TextField fx:id="dob" alignment="CENTER" layoutX="158.0" layoutY="205.0" promptText="MM/DD/YYYY" />
+      <TextField fx:id="phoneNumber" alignment="CENTER" layoutX="159.0" layoutY="295.0" promptText="Only Digits" />
+      <TextField fx:id="email" layoutX="158.0" layoutY="343.0" />
+      <TextField fx:id="username" layoutX="158.0" layoutY="394.0" />
+      <PasswordField fx:id="password" layoutX="158.0" layoutY="443.0" />
+      <PasswordField fx:id="confirmPass" layoutX="158.0" layoutY="491.0" />
+      <Label layoutX="14.0" layoutY="67.0" text="First Name:" />
+      <Label layoutX="14.0" layoutY="116.0" text="Last Name:" />
+      <Label layoutX="14.0" layoutY="164.0" text="SSN:" />
+      <Label layoutX="14.0" layoutY="210.0" text="Date of Birth:" />
+      <Label layoutX="14.0" layoutY="256.0" text="Gender:" />
+      <Label layoutX="14.0" layoutY="300.0" text="Phone Number:" />
+      <Label layoutX="14.0" layoutY="348.0" text="Email:" />
+      <Label layoutX="14.0" layoutY="399.0" text="Username:" />
+      <Label layoutX="12.0" layoutY="448.0" text="Password:" />
+      <Label layoutX="12.0" layoutY="496.0" text="Confirm Password:" />
+      <Label layoutX="12.0" layoutY="608.0" text="Profile Picture:" />
+      <ImageView fx:id="profilePhoto" fitHeight="150.0" fitWidth="200.0" layoutX="152.0" layoutY="608.0" pickOnBounds="true" preserveRatio="true" />
+      <CheckBox fx:id="male" layoutX="156.0" layoutY="256.0" mnemonicParsing="false" text="Male" />
+      <CheckBox fx:id="female" layoutX="225.0" layoutY="256.0" mnemonicParsing="false" text="Female" />
+      <CheckBox fx:id="nonbinary" layoutX="306.0" layoutY="256.0" mnemonicParsing="false" text="Non-binary " />
+      <Button layoutX="214.0" layoutY="785.0" mnemonicParsing="false" onAction="#createNewUser" text="Register" />
+      <Label layoutX="16.0" layoutY="528.0" prefHeight="68.0" prefWidth="328.0" text="Your password must contain a number, uppercase letter, lowercase letter, and a special character." underline="true" wrapText="true" />
+      <Button fx:id="browse" layoutX="13.0" layoutY="629.0" mnemonicParsing="false" onAction="#getPhotoPathFromUser" text="Browse" />
+      <Label alignment="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="31.0" prefWidth="412.0" text="Registration">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="registrationFailed" layoutX="177.0" layoutY="758.0" prefHeight="27.0" prefWidth="150.0" text="Registration Failed" textFill="#fc0000" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorInfName" layoutX="352.0" layoutY="67.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorInlName" layoutX="352.0" layoutY="116.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorInssn" layoutX="352.0" layoutY="164.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorIndob" layoutX="352.0" layoutY="210.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorInGender" layoutX="416.0" layoutY="249.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorInPhoneNumber" layoutX="352.0" layoutY="300.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="errorInEmail" layoutX="352.0" layoutY="348.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="errorInUsername" layoutX="352.0" layoutY="399.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="errorInPassword" layoutX="352.0" layoutY="448.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="errorInConfirmPassword" layoutX="352.0" layoutY="496.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="errorInPicture" layoutX="90.0" layoutY="634.0" text="*" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="107.0" layoutY="785.0" mnemonicParsing="false" onAction="#closeRegistration" text="Back" />
+      <Label fx:id="accountCreated" layoutX="183.0" layoutY="758.0" prefHeight="27.0" prefWidth="139.0" text="Account Created" textAlignment="CENTER" textFill="#23bf44" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

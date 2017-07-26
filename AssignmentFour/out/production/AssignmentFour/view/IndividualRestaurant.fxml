@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="667.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IndividualRestaurantController">
+   <children>
+      <ImageView fx:id="restaurantImageView" fitHeight="318.0" fitWidth="452.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="true" />
+      <ListView fx:id="restaurantListView" layoutX="501.0" layoutY="10.0" prefHeight="318.0" prefWidth="571.0" />
+      <WebView fx:id="restaurantWebView" layoutX="14.0" layoutY="14.0" prefHeight="318.0" prefWidth="452.0" visible="false" />
+   </children>
+</AnchorPane>
